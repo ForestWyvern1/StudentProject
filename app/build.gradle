@@ -17,7 +17,7 @@ android {
     }
 
     //подключаем viewBinding
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 
