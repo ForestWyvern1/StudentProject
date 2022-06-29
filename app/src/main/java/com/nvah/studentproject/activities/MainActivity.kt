@@ -2,9 +2,11 @@ package com.nvah.studentproject.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.nvah.studentproject.adapters.BasicRecyclerViewAdapter
+import androidx.fragment.app.Fragment
+import com.nvah.studentproject.R
 import com.nvah.studentproject.databinding.ActivityMainBinding
+import com.nvah.studentproject.fragments.FirstFragment
+import com.nvah.studentproject.fragments.SecondFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,10 +18,30 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.mainRv.layoutManager = LinearLayoutManager(this)
-        binding.mainRv.adapter =
-            BasicRecyclerViewAdapter(this) //для комбинированного тоже самое, но у него есть и второй параметр
+        changeFragment(FirstFragment())
 
+        binding.bottomNavigationBar.setOnNavigationItemSelectedListener {
+
+            when (it.itemId){
+
+                //айдишники наших item, которые мы написали в menu файле
+                R.id.firstButton -> {
+                    changeFragment(FirstFragment())
+                }
+
+                R.id.secondButton -> {
+                    changeFragment(SecondFragment())
+                }
+
+            }
+
+            true
+        }
 
     }
+
+    private fun changeFragment(fmt : Fragment){
+        supportFragmentManager.beginTransaction().replace(binding.fragmentHolder.id, fmt).commit()
+    }
+
 }

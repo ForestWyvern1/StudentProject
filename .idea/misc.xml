@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Nvah/AndroidStudioProjects/StudentProject/app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="..\:/Users/Nvah/AndroidStudioProjects/StudentProject/app/src/main/res/layout/fragment_first.xml" value="0.19613050075872535" />
+        <entry key="..\:/Users/Nvah/AndroidStudioProjects/StudentProject/app/src/main/res/layout/fragment_second.xml" value="0.19613050075872535" />
         <entry key="..\:/Users/Nvah/AndroidStudioProjects/StudentProject/app/src/main/res/layout/recycler_view_item_view.xml" value="0.201171875" />
         <entry key="..\:/Users/Nvah/AndroidStudioProjects/StudentProject/app/src/main/res/layout/second_recycler_view_item.xml" value="0.19613050075872535" />
+        <entry key="..\:/Users/Nvah/AndroidStudioProjects/StudentProject/app/src/main/res/menu/bn_menu.xml" value="0.19613050075872535" />
       </map>
     </option>
   </component>
